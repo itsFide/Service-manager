@@ -297,6 +297,10 @@ a {
     color: #fff;
     background-color: #061e37;
 }
+.btn{
+    
+}
+
 .intro__wrap {
     height: 85vh;
 }
@@ -439,98 +443,96 @@ a {
         font-size: 10px;
      }
 }
-@media(max-width:1120px){
-    .intro__video{
-        width: 500px;
-        height: 300px;
-    }
-}
-@media(max-width:910px){
-    .wrapper{
-        flex-direction: column;
-    }
-    .intro__video{
-        width: 400px;
-        height: 200px;
-        position: absolute;
-        left: 30px;
-        bottom: 20%;
-        
-    }
-    .intro__inner{
-        position: absolute;
-        left: 30px;
-        top: 20%;
-    }
-    .btn{
-     position: absolute;
-     bottom: -70%;   
-    }
-}
-@media only screen and (max-height: 720px){
-    .intro__video{
-        width: 300px;
-    }
-    .intro__title{
-        font-size: 20pt;
+@media screen and (max-width:1200px){
+    .container{
+        width: 1140px;
     }
 }
 
-@media(max-width:480px){
-
+@media screen and (max-width:1199px){
+    .container{
+        width: 1000px;
+    }
     .intro__title{
-        font-size: 23pt;
+        font-size: 30pt;
     }
     .intro__descr{
         font-size: 14px;
-        line-height: 25px;
-    }
-    .intro__video{
-        width: 300px;
-        height: 150px;
-        position: absolute;
-        left: 30px;
-        bottom: 33%;
-    }
-    .play-btn{
-        padding: 13px;
-        font-size: 10px;
-    }
-    .intro__video-descr{
-        font-size: 14px;
+        line-height: 28px;
     }
     
 }
-@media(max-width:380px){
+
+@media screen and (max-width:991px){
+    .container{
+        width: 720px;
+    }
+    .video{
+        width: 100%;
+    }
     .intro__video{
-        width: 250px;
-        height: 150px;
-        position: absolute;
-        left: 30px;
-        bottom: 33%;
+        width: 400px;
+        height: 350px;
     }
     .intro__title{
-        font-size: 18pt;
+        font-size: 25pt;
     }
     .intro__descr{
         font-size: 12px;
-    }
-    .btn{
-        position: absolute;
-        bottom: -80%;   
+        line-height: 25px;
     }
     .btn__item{
+        margin-right: 20px;
         padding: 10px 15px;
-        font-size: 10px;
+    }
+    
+}
+@media screen and (max-width:776px){
+    .container{
+        width: 540px;
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .intro__inner{
+        margin-top: 20%;
+    }
+    .btn{
+        margin-bottom: 10%;
+    }
+    .intro__video{
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:575px){
+    .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .burger__item {
+        width: 30px;
+        height: 25px;
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        background-color: #fff;
+        display: block;
+        cursor: pointer;
+        border-radius: 5px;
+        z-index: 2;
     }
     .burger__item::before {
         content: "";
         position: absolute;
-        right: 5px;
+        right: 7px;
         background-color: #061e37;
-        width: 20px;
+        width: 15px;
         height: 3px;
-        top: 7px;
+        top: 6px;
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
@@ -538,22 +540,22 @@ a {
     .burger__item::after {
         content: "";
         position: absolute;
-        right: 5px;
+        right: 7px;
         background-color: #061e37;
-        width: 20px;
+        width: 15px;
         height: 3px;
-        top: 14px;
+        top: 12px;
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
     }
     .burger__item span {
         position: absolute;
-        right: 5px;
+        right: 7px;
         background-color: #061e37;
-        width: 20px;
+        width: 15px;
         height: 3px;
-        top: 21px;
+        top: 18px;
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
@@ -562,78 +564,88 @@ a {
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
-        top: 14px;
+        top: 12px;
     }
     .burger__item.active::after {
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
-        top: 14px;
+        top: 12px;
     }
     .burger__item.active span {
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
-        top: 14px;
+        top: 12px;
         opacity: 0;
     }
-    .burger__item{
-        width: 30px;
-        height: 30px;
-    }
     .nav.active{
-        height: 300px;
         width: 150px;
-    }
-    .nav__inner{
-       display: flex;
-       flex-direction: column;
-       position: absolute;
-       top: 10%;  
-       right: 0;
-    }
-    .sing__up-burger{
-        font-size: 14px;
-        padding:3px 5px;
+        height: 250px;
     }
     .nav__link.active{
-        font-size: 14px;
-        margin-top: 15px;
+        margin-top: 10px;
+        
+    }
+    .nav__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .sing__up-burger{
+        padding: 3px 5px;
     }
 }
-@media only screen and (max-height: 568px) {
-    .btn{
-        bottom:-55%;
-    }
-    .intro__descr{
-        font-size: 10px;
-        line-height: 20px;
-    }
+@media screen and (max-width:450px){
+    
     .intro__video{
-        width: 200px;
-        height: 100px;
-        bottom: 25%;
+        height: 200px;
+        margin-bottom: 8%;
+    }
+}
+@media only screen and (max-height:1024px){
+    .video{
+        height: 100%;
+    }
+}
+@media only screen and (max-height:720px){
+    .video{
+        height: 100%;
+    }
+    .intro__inner{
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width:375px){
+    .intro__video{
+        width: 250px;
+        height: 150px;
+        margin-bottom: 5%;
     }
     .intro__wrap {
         height: 83vh;
     }
-    .btn__item {
-        padding: 7px 10px;
-        font-size: 8px;
-        margin-right: 20px;
+    
+    .play-btn{
+        padding:10px;
     }
-}
-@media(max-width:280px){
-    .intro__video{
-        width: 200px;
-        height: 150px;
-        bottom:15%;
+    .video{
+        height: 60%;
     }
-    .btn{
-        bottom: -50%;
+    .nav{
+        position: absolute;
+        right: 0;
     }
-    .btn__item{
-        font-size: 8px;
-        padding: 5px 10px;
+    .intro__video-descr{
+        font-size: 10px;
     }
+    .intro__title{
+        font-size: 15pt;
+    }
+    .intro__descr{
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
 }
