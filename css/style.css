@@ -599,10 +599,11 @@ a {
         margin-bottom: 10%;
     }
     .intro__video{
-        width: 300px;
+        width: 100%;
         height: 250px;
     }
     .video{
+        
         height: 100%;
     }
 }
@@ -781,6 +782,7 @@ a {
 }
 @media only screen and (max-height:720px){
     .video{
+        width: 100%;
         height: 100%;
     }
     .intro__inner{
@@ -789,7 +791,7 @@ a {
 }
 @media screen and (max-width:375px){
     .intro__video{
-        width: 250px;
+        width: 100%;
         height: 150px;
         margin-bottom: 5%;
     }
@@ -801,6 +803,7 @@ a {
         padding:10px;
     }
     .video{
+        width: 100%;
         height: 60%;
     }
     .nav{
