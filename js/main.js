@@ -2,7 +2,10 @@ let burgerBtn = document.querySelector('.burger__item');
 let nav = document.querySelector('.nav');
 let navLink = document.querySelectorAll('.nav__link');
 let introInner = document.querySelector('.intro__inner');
-let singUp = document.querySelector('.sing__up')
+let singUp = document.querySelector('.sing__up');
+let accItem = document.querySelectorAll('.accardion__item');
+let accContent = document.querySelectorAll('.accordion__content');
+
 
 window.addEventListener('load',loadText)
 function loadText(){
@@ -26,3 +29,17 @@ function openMenu(){
     }
 }
 
+// Accordion
+
+accItem.forEach(function(event){
+    event.addEventListener('click',function(){
+        let child = event.querySelector('.accordion__content');
+        if(!(child.classList.contains('active'))){
+            for(let i = 0; i < accContent.length;i++){
+                accContent[i].classList.remove('active');
+            }
+            child.classList.add('active')
+        }
+        
+    })
+})
