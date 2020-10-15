@@ -45,5 +45,89 @@ accItem.forEach(function(event){
         
     })
 });
+// slider
+window.addEventListener('load',function(){
+    let btnLeft = document.querySelector('.btn__left');
+let btnRight = document.querySelector('.btn__right'); 
+let slidesItem = document.querySelectorAll('.slides__item');
+let counter = 0;
+let stepSize = slidesItem[4].clientWidth;
+
+btnRight.addEventListener('click',function(){
+    counter+=1.5;
+    
+    for(let i = 0; i < slidesItem.length;i++){
+        
+        slidesItem[i].style.transform = 'translate(' + `${-stepSize * counter}px)`;
+        console.log(counter);
+        if(counter > 6){
+            counter = 0;
+            slidesItem[i].style.transform = 'translate(' + `${-stepSize * counter}px)`;
+        }
+        if(counter == 1.5){
+            firstName()
+        }
+        if(counter == 3){
+            twoPersonName();
+        }
+        if(counter == 4.5){
+            threPersonName()
+        }
+        if(counter == 6){
+            firstName();
+        }
+        if(counter == 0){
+            threPersonName();
+        }
+        
+        
+    } 
+    
+})
+
+btnLeft.addEventListener('click',function(){
+    counter+=1.5;
+    
+    for(let i = 0; i < slidesItem.length;i++){
+        
+        slidesItem[i].style.transform = 'translate(' + `${stepSize * counter}px)`;
+        console.log(counter);
+        if(counter > 6){
+            counter = 0;
+            slidesItem[i].style.transform = 'translate(' + `${stepSize * counter}px)`;
+        }
+        if(counter == 1.5){
+            twoPersonName()
+        }
+        if(counter == 3){
+            firstName();
+        }
+        if(counter == 4.5){
+            threPersonName()
+        }
+        if(counter == 6){
+            twoPersonName();
+        }
+        if(counter == 0){
+            threPersonName();
+        }
+        
+        
+    }
+    
+})
+function firstName(){
+    let personName = document.querySelector('.person__title h3');
+    personName.innerText = "Alan Smith";
+}
+function twoPersonName(){
+    let personName = document.querySelector('.person__title h3');
+    personName.innerText = "Mary Johnson";
+}
+function threPersonName(){
+    let personName = document.querySelector('.person__title h3');
+    personName.innerText = "Sophie Turner";
+}
+})
 
 

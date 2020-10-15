@@ -667,19 +667,54 @@ a {
     align-items: center;
     height: 40vh;
 }
+.slides__inner {
+    display: flex;
+    width: 500px;
+    height: 512px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.btn__left{
+    margin-right: 50px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.btn__right{
+    margin-left: 50px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.slider__btn{
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    
+}
+
 .slides__item{
     margin-right: 50px;
+    
+    left: 0;
+    top: 0;
+    width: 512px;
+    height: 512px;
     align-items: center;
     justify-content: center;
     display: flex;
     cursor: pointer;
+    transition: all 0.5s;
 }
-.slides__item:nth-child(2){
+
+/* .slides__item:nth-child(2){
     background-color: #fff;
     border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} */
 .slides__item:last-child{
     margin-right: 0;
 }
@@ -983,6 +1018,10 @@ a {
     .slider__icon img{
         width: 70%;
     }
+    .slides__inner{
+        width: 100px;
+        height: 100px;
+    }
 }
 
 @media screen and (max-width:575px){
@@ -1224,6 +1263,20 @@ a {
         font-size: 12px;
         line-height: 15px;
     }
+    .team__title h3{
+        font-size: 20px;
+    }
+    .team__subtitle p{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .person__title h3{
+        font-size: 14px;
+    }
+    .person__descr p{
+        font-size: 12px;
+        line-height: 15px;
+    }
 }
 @media only screen and (max-height:750px){
     .card__title{
@@ -1291,6 +1344,9 @@ a {
     }
     .intro__inner{
         margin-top: 10%;
+    }
+    .person__title{
+        margin-bottom: 15px;
     }
 }
 @media screen and (max-width:375px){
